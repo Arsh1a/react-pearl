@@ -1,0 +1,196 @@
+@import "../../styles/variables.css";
+@import "../../styles/typography.css";
+
+.pearl-button {
+  position: relative;
+  overflow: hidden;
+  outline: none;
+  box-shadow: none;
+  border-style: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-weight: 500;
+  transition: 0.2s;
+  transition: background 400ms;
+  text-overflow: ellipsis;
+}
+
+a.pearl-button {
+  text-decoration: none;
+}
+
+.pearl-button-full-width {
+  width: 100%;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  background-color: rgba(255, 255, 255, 0.418);
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/*Size*/
+
+.pearl-button-small {
+  padding: 8px 10px;
+  font-size: 0.8rem;
+  border-radius: 10px;
+}
+
+.pearl-button-medium {
+  padding: 10px 16px;
+  font-size: 1rem;
+  border-radius: 14px;
+}
+
+.pearl-button-large {
+  padding: 12px 22px;
+  font-size: 1.2rem;
+  border-radius: 18px;
+}
+
+/*Color*/
+
+.pearl-button-primary {
+  background-color: var(--bg-primary);
+  color: white;
+}
+
+.pearl-button-primary:hover {
+  background-color: var(--bg-primary-dark);
+}
+
+.pearl-button-secondary {
+  background-color: var(--bg-secondary);
+  color: white;
+}
+
+.pearl-button-secondary:hover {
+  background-color: var(--bg-secondary-dark);
+}
+
+.pearl-button-dark {
+  background-color: var(--bg-dark);
+  color: white;
+}
+
+.pearl-button-light {
+  background-color: var(--bg-light);
+  color: black;
+}
+
+/*Variant*/
+
+.pearl-button-outlined {
+  background-color: transparent;
+  border: 2px;
+  border-style: solid;
+}
+
+/*Reducing the padding for border size*/
+
+.pearl-button-outlined.pearl-button-small {
+  padding: 6px 8px;
+}
+
+.pearl-button-outlined.pearl-button-medium {
+  padding: 8px 14px;
+}
+
+.pearl-button-outlined.pearl-button-large {
+  padding: 10px 20px;
+}
+
+/*Border color*/
+
+.pearl-button-outlined.pearl-button-primary {
+  border-color: var(--bg-primary);
+  color: var(--bg-primary);
+}
+
+.pearl-button-outlined.pearl-button-primary:hover {
+  background-color: rgba(129, 129, 129, 0.08);
+}
+
+.pearl-button-outlined.pearl-button-secondary {
+  border-color: var(--bg-secondary);
+  color: var(--bg-secondary);
+}
+
+.pearl-button-outlined.pearl-button-secondary:hover {
+  background-color: rgba(129, 129, 129, 0.08);
+}
+
+.pearl-button-outlined.pearl-button-dark {
+  border-color: var(--bg-dark);
+  color: var(--bg-dark);
+}
+
+.pearl-button-outlined.pearl-button-dark:hover {
+  background-color: rgba(129, 129, 129, 0.08);
+}
+
+.pearl-button-outlined.pearl-button-light {
+  border-color: var(--bg-light);
+  color: var(--bg-light);
+}
+
+.pearl-button-outlined.pearl-button-light:hover {
+  background-color: rgba(129, 129, 129, 0.08);
+}
+
+.pearl-button-text {
+  background-color: transparent;
+}
+
+.pearl-button-text:hover {
+  background-color: rgba(129, 129, 129, 0.08);
+}
+
+.pearl-button-text.pearl-button-primary {
+  color: var(--bg-primary);
+}
+
+.pearl-button-text.pearl-button-secondary {
+  color: var(--bg-secondary);
+}
+
+.pearl-button-text.pearl-button-dark {
+  color: var(--bg-dark);
+}
+
+.pearl-button-text.pearl-button-light {
+  color: var(--bg-light);
+}
+
+/*Disabled*/
+
+.pearl-button-disabled {
+  color: rgba(255, 255, 255, 0.719);
+  background-color: var(--bg-disabled);
+  cursor: default;
+}
+
+.pearl-button-disabled:hover {
+  background-color: var(--bg-disabled);
+}
+
+.pearl-button-disabled.pearl-button-outlined {
+  background-color: transparent;
+  color: var(--bg-disabled);
+  border-color: var(--bg-disabled);
+}
+
+.pearl-button-disabled.pearl-button-text {
+  background-color: transparent;
+  color: var(--bg-disabled);
+}

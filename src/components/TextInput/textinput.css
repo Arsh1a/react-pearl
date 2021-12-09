@@ -1,0 +1,137 @@
+@import "../../styles/variables.css";
+@import "../../styles/typography.css";
+
+.pearl-textinput {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-weight: 500;
+  outline: none;
+  border-style: solid;
+  display: flex;
+  align-items: center;
+}
+
+.pearl-textinput button {
+  border-radius: 0;
+}
+
+.pearl-textinput-end-span {
+  display: flex;
+  align-items: center;
+}
+
+.pearl-textinput-starticon,
+.pearl-textinput-endicon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pearl-textinput-starticon {
+  margin-left: 10px;
+}
+
+.pearl-textinput-endicon {
+  margin-right: 10px;
+}
+
+.pearl-textinput-endicon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2px;
+}
+
+.pearl-textinput input {
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+}
+
+/*Size*/
+
+.pearl-textinput-small {
+  border-radius: 10px;
+}
+
+.pearl-textinput-small input {
+  padding: 6px 10px;
+  font-size: 0.8rem;
+}
+
+.pearl-textinput-small .pearl-textinput-starticon,
+.pearl-textinput-small .pearl-textinput-endicon {
+  font-size: 0.8rem;
+}
+
+.pearl-textinput-medium {
+  border-radius: 14px;
+}
+
+.pearl-textinput-medium input {
+  padding: 8px 16px;
+  font-size: 1rem;
+}
+
+.pearl-textinput-medium .pearl-textinput-starticon,
+.pearl-textinput-medium .pearl-textinput-endicon {
+  font-size: 1rem;
+}
+
+.pearl-textinput-large {
+  border-radius: 18px;
+}
+
+.pearl-textinput-large input {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+}
+
+.pearl-textinput-large .pearl-textinput-starticon,
+.pearl-textinput-large .pearl-textinput-endicon {
+  font-size: 1.2rem;
+}
+
+/*Color*/
+
+.pearl-textinput-light {
+  border-color: var(--bg-gray);
+  background-color: var(--bg-light);
+}
+
+.pearl-textinput-light input::placeholder {
+  color: rgb(155, 155, 155);
+}
+
+.pearl-textinput-dark,
+.pearl-textinput-dark input {
+  border-color: rgb(46, 46, 46);
+  background-color: var(--bg-dark);
+  color: var(--bg-gray);
+}
+
+.pearl-textinput-dark input::placeholder {
+  color: var(--bg-gray);
+}
+
+/*Disabled*/
+
+.pearl-textinput-disabled {
+  color: var(--bg-disabled-light);
+  background-color: var(--bg-disabled);
+  border-color: var(--bg-gray);
+  cursor: default;
+}
+
+.pearl-textinput-disabled input,
+.pearl-textinput-disabled input::placeholder {
+  background-color: transparent;
+  color: var(--bg-disabled-light);
+}
+
+.pearl-textinput-disabled.pearl-textinput-text {
+  background-color: transparent;
+  color: var(--bg-disabled);
+}
