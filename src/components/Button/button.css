@@ -177,7 +177,7 @@ a.pearl-button {
 .pearl-button-disabled {
   color: rgba(255, 255, 255, 0.719);
   background-color: var(--bg-disabled);
-  cursor: default;
+  cursor: not-allowed;
 }
 
 .pearl-button-disabled:hover {

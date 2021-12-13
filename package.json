@@ -1,6 +1,6 @@
 {
   "name": "react-pearl",
-  "version": "1.0.4",
+  "version": "1.0.0",
   "description": "Pearl is a lightweight and modern React UI Component library.",
   "homepage": "http://arsh1a.github.io/react-pearl",
   "main": "lib/index.js",

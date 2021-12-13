@@ -1,0 +1,121 @@
+@import "../../styles/variables.css";
+@import "../../styles/typography.css";
+
+.pearl-switch {
+  position: relative;
+  display: flex;
+}
+
+.pearl-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.pearl-switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-gray);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.pearl-switch-slider:before {
+  position: absolute;
+  content: "";
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .pearl-switch-slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/*Size*/
+
+.pearl-switch-small {
+  width: 50px;
+  height: 25px;
+}
+
+.pearl-switch-small .pearl-switch-slider:before {
+  height: 18px;
+  width: 18px;
+  left: 5px;
+  bottom: 3.5px;
+}
+
+.pearl-switch-small input:checked + .pearl-switch-slider:before {
+  -webkit-transform: translateX(23px);
+  -ms-transform: translateX(23px);
+  transform: translateX(23px);
+}
+
+.pearl-switch-medium {
+  width: 60px;
+  height: 30px;
+}
+
+.pearl-switch-medium .pearl-switch-slider:before {
+  height: 22px;
+  width: 22px;
+  left: 5px;
+  bottom: 4px;
+}
+
+.pearl-switch-medium input:checked + .pearl-switch-slider:before {
+  -webkit-transform: translateX(27px);
+  -ms-transform: translateX(27px);
+  transform: translateX(27px);
+}
+
+.pearl-switch-large {
+  width: 70px;
+  height: 35px;
+}
+
+.pearl-switch-large .pearl-switch-slider:before {
+  height: 27px;
+  width: 27px;
+  left: 5px;
+  bottom: 4px;
+}
+
+.pearl-switch-large input:checked + .pearl-switch-slider:before {
+  -webkit-transform: translateX(33px);
+  -ms-transform: translateX(33px);
+  transform: translateX(33px);
+}
+
+/*Color*/
+
+.pearl-switch-primary input:checked + .pearl-switch-slider {
+  background-color: var(--bg-primary);
+}
+
+.pearl-switch-secondary input:checked + .pearl-switch-slider {
+  background-color: var(--bg-secondary);
+}
+
+.pearl-switch-dark input:checked + .pearl-switch-slider {
+  background-color: var(--bg-dark);
+}
+
+/*Disabled*/
+
+.pearl-switch-disabled {
+  opacity: 0.5;
+}
+
+.pearl-switch-disabled .pearl-switch-slider {
+  cursor: not-allowed;
+}

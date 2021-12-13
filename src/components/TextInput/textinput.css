@@ -119,19 +119,14 @@
 /*Disabled*/
 
 .pearl-textinput-disabled {
-  color: var(--bg-disabled-light);
-  background-color: var(--bg-disabled);
-  border-color: var(--bg-gray);
-  cursor: default;
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
-.pearl-textinput-disabled input,
-.pearl-textinput-disabled input::placeholder {
-  background-color: transparent;
-  color: var(--bg-disabled-light);
+.pearl-textinput-disabled input {
+  cursor: not-allowed;
 }
 
-.pearl-textinput-disabled.pearl-textinput-text {
-  background-color: transparent;
-  color: var(--bg-disabled);
+.pearl-textinput-disabled button {
+  cursor: not-allowed;
 }
