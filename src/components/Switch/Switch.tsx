@@ -5,12 +5,14 @@ export interface SwitchProps extends React.InputHTMLAttributes<HTMLInputElement>
   componentSize?: "small" | "medium" | "large";
   colorType?: "primary" | "secondary" | "dark";
   disabled?: boolean;
+  label?: string;
 }
 
 const Switch = ({
   componentSize = "medium",
   colorType = "primary",
   disabled = false,
+  label,
   ...rest
 }: SwitchProps) => {
   const classNames = [
@@ -26,6 +28,7 @@ const Switch = ({
     <label className={classNames}>
       <input type="checkbox" {...rest} disabled={disabled} />
       <span className="pearl-switch-slider"></span>
+      {label && <span className="pearl-switch-label">{label}</span>}
     </label>
   );
 };

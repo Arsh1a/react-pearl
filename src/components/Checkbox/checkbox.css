@@ -1,0 +1,125 @@
+@import "../../styles/variables.css";
+@import "../../styles/typography.css";
+
+.pearl-checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.pearl-checkbox input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.pearl-checkbox-label {
+  margin-left: 5px;
+}
+
+/* Create a custom checkbox */
+.pearl-checkbox-checkmark {
+  background-color: var(--bg-gray);
+}
+
+.pearl-checkbox:hover input ~ .pearl-checkbox-checkmark {
+  background-color: #ccc;
+}
+
+.pearl-checkbox input:checked ~ .pearl-checkbox-checkmark {
+  background-color: var(--bg-primary);
+}
+
+.pearl-checkbox-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.pearl-checkbox input:checked ~ .pearl-checkbox-checkmark:after {
+  display: block;
+}
+
+.pearl-checkbox .pearl-checkbox-checkmark:after {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/*Size*/
+
+.pearl-checkbox-small .pearl-checkbox-checkmark {
+  height: 15px;
+  width: 15px;
+  border-radius: 4px;
+}
+
+.pearl-checkbox-small .pearl-checkbox-checkmark:after {
+  position: relative;
+  left: 5px;
+  top: 2px;
+  width: 3px;
+  height: 6px;
+}
+
+.pearl-checkbox-medium .pearl-checkbox-checkmark {
+  height: 20px;
+  width: 20px;
+  border-radius: 6px;
+}
+
+.pearl-checkbox-medium .pearl-checkbox-checkmark:after {
+  position: relative;
+  left: 6.5px;
+  top: 2px;
+  width: 4px;
+  height: 9px;
+}
+
+.pearl-checkbox-large .pearl-checkbox-checkmark {
+  height: 25px;
+  width: 25px;
+  border-radius: 8px;
+}
+
+.pearl-checkbox-large .pearl-checkbox-checkmark:after {
+  position: relative;
+  left: 9px;
+  top: 4px;
+  width: 5px;
+  height: 11px;
+}
+
+/*Color*/
+
+.pearl-checkbox-primary input:checked ~ .pearl-checkbox-checkmark {
+  background-color: var(--bg-primary);
+}
+
+.pearl-checkbox-secondary input:checked ~ .pearl-checkbox-checkmark {
+  background-color: var(--bg-secondary);
+}
+
+.pearl-checkbox-dark input:checked ~ .pearl-checkbox-checkmark {
+  background-color: var(--bg-dark);
+}
+
+.pearl-checkbox-light input:checked ~ .pearl-checkbox-checkmark {
+  background-color: var(--bg-light);
+  outline: 1px solid var(--bg-gray);
+}
+
+.pearl-checkbox-light .pearl-checkbox-checkmark:after {
+  border: solid var(--bg-dark);
+  border-width: 0 3px 3px 0;
+}
+
+/*Disabled*/
+
+.pearl-checkbox-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

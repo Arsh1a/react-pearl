@@ -3,7 +3,8 @@
 
 .pearl-switch {
   position: relative;
-  display: flex;
+  display: inline-flex;
+  align-items: center;
 }
 
 .pearl-switch input {
@@ -12,17 +13,20 @@
   height: 0;
 }
 
+.pearl-switch-label {
+  margin-left: 5px;
+}
+
 .pearl-switch-slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background-color: var(--bg-gray);
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 34px;
+}
+
+.pearl-switch-label,
+.pearl-switch-slider {
+  cursor: pointer;
 }
 
 .pearl-switch-slider:before {
@@ -42,7 +46,7 @@ input:checked + .pearl-switch-slider:before {
 
 /*Size*/
 
-.pearl-switch-small {
+.pearl-switch-small .pearl-switch-slider {
   width: 50px;
   height: 25px;
 }
@@ -50,17 +54,17 @@ input:checked + .pearl-switch-slider:before {
 .pearl-switch-small .pearl-switch-slider:before {
   height: 18px;
   width: 18px;
-  left: 5px;
+  left: 11px;
   bottom: 3.5px;
 }
 
 .pearl-switch-small input:checked + .pearl-switch-slider:before {
-  -webkit-transform: translateX(23px);
-  -ms-transform: translateX(23px);
-  transform: translateX(23px);
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
 }
 
-.pearl-switch-medium {
+.pearl-switch-medium .pearl-switch-slider {
   width: 60px;
   height: 30px;
 }
@@ -68,7 +72,7 @@ input:checked + .pearl-switch-slider:before {
 .pearl-switch-medium .pearl-switch-slider:before {
   height: 22px;
   width: 22px;
-  left: 5px;
+  left: 13px;
   bottom: 4px;
 }
 
@@ -78,7 +82,7 @@ input:checked + .pearl-switch-slider:before {
   transform: translateX(27px);
 }
 
-.pearl-switch-large {
+.pearl-switch-large .pearl-switch-slider {
   width: 70px;
   height: 35px;
 }
@@ -86,14 +90,14 @@ input:checked + .pearl-switch-slider:before {
 .pearl-switch-large .pearl-switch-slider:before {
   height: 27px;
   width: 27px;
-  left: 5px;
+  left: 13px;
   bottom: 4px;
 }
 
 .pearl-switch-large input:checked + .pearl-switch-slider:before {
-  -webkit-transform: translateX(33px);
-  -ms-transform: translateX(33px);
-  transform: translateX(33px);
+  -webkit-transform: translateX(31px);
+  -ms-transform: translateX(31px);
+  transform: translateX(31px);
 }
 
 /*Color*/
@@ -114,8 +118,5 @@ input:checked + .pearl-switch-slider:before {
 
 .pearl-switch-disabled {
   opacity: 0.5;
-}
-
-.pearl-switch-disabled .pearl-switch-slider {
   cursor: not-allowed;
 }
