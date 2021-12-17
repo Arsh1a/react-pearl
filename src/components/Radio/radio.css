@@ -1,0 +1,116 @@
+@import "../../styles/variables.css";
+@import "../../styles/typography.css";
+
+.pearl-radio {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.pearl-radio-label {
+  margin-left: 5px;
+}
+
+.pearl-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.pearl-radio-checkmark {
+  background-color: var(--bg-gray);
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pearl-radio:hover input ~ .pearl-radio-checkmark {
+  background-color: #ccc;
+}
+
+.pearl-radio-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.pearl-radio input:checked ~ .pearl-radio-checkmark:after {
+  display: block;
+}
+
+.pearl-radio .pearl-radio-checkmark:after {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+}
+
+/*Size*/
+
+.pearl-radio-small .pearl-radio-checkmark {
+  height: 15px;
+  width: 15px;
+}
+
+.pearl-radio-small .pearl-radio-checkmark:after {
+  width: 6px;
+  height: 6px;
+}
+
+.pearl-radio-medium .pearl-radio-checkmark {
+  height: 20px;
+  width: 20px;
+}
+
+.pearl-radio-medium .pearl-radio-checkmark:after {
+  width: 8px;
+  height: 8px;
+}
+
+.pearl-radio-large .pearl-radio-checkmark {
+  height: 25px;
+  width: 25px;
+}
+
+.pearl-radio-large .pearl-radio-checkmark:after {
+  width: 10px;
+  height: 10px;
+}
+
+/*Color*/
+
+.pearl-radio-primary input:checked ~ .pearl-radio-checkmark {
+  background-color: var(--bg-primary);
+}
+
+.pearl-radio-secondary input:checked ~ .pearl-radio-checkmark {
+  background-color: var(--bg-secondary);
+}
+
+.pearl-radio-dark input:checked ~ .pearl-radio-checkmark {
+  background-color: var(--bg-dark);
+}
+
+.pearl-radio-light input:checked ~ .pearl-radio-checkmark {
+  background-color: var(--bg-light);
+  outline: 1px solid var(--bg-gray);
+}
+
+.pearl-radio-light .pearl-radio-checkmark:after {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--bg-dark);
+}
+
+/*Disabled*/
+
+.pearl-radio-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
